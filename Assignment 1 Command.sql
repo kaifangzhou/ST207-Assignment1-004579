@@ -379,4 +379,18 @@ GROUP BY member_id)
 LEFT JOIN member 
 ON member_id = member.id;
 
+#Anastasia as a seller has the highest rating 9.5, Bob as a seller has the highest rating 8.0
+SELECT member.id, name,feedback.rating
+FROM member
+LEFT JOIN feedback
+ON feedback.the_other_party = member.id
+WHERE is_buyer = 'FALSE'
+ORDER BY name ASC;
+
+SELECT member.id, name,feedback.rating
+FROM member
+LEFT JOIN feedback
+ON feedback.the_other_party = member.id
+WHERE is_buyer = 'TRUE'
+ORDER BY name ASC;
 
