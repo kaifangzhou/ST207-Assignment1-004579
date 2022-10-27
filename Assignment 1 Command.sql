@@ -363,7 +363,7 @@ SELECT * FROM member;
 
 #List all items, ordering ascending starting bid price
 SELECT * FROM item
-ORDER BY start_bidding_price;
+ORDER BY start_bidding_price ASC;
 
 #Highest amount of each bid
 SELECT MAX(price) AS final_bidding_price
