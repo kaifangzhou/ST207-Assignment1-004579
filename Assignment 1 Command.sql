@@ -365,8 +365,18 @@ SELECT * FROM member;
 SELECT * FROM item
 ORDER BY start_bidding_price ASC;
 
-#Highest amount of each bid
-SELECT MAX(price) AS final_bidding_price
+#Seller Anastasia earned the highest amount 110 in this auction
+SELECT SUM(price_difference) AS total_profit,member_id,name
+FROM
+(SELECT final_bidding_price-start_bidding_price AS price_difference, item_id, member_id
+FROM
+(SELECT MAX(price) AS final_bidding_price, item_id, start_bidding_price, item.member_id
 FROM bid
-GROUP BY item_id;
+LEFT JOIN item
+ON bid.item_id = item.id
+GROUP BY item_id)
+GROUP BY member_id)
+LEFT JOIN member 
+ON member_id = member.id;
+
 
