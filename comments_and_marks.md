@@ -9,7 +9,8 @@ You have listed most of entities with attributes, relationship with cardinality 
 1) It is a bit confusing that the relationship lines are with arrows. 
 2) Notations are missing to denote Subclasses (buyer and seller) in your model. Please check out lecture note week 2 page 13 for details. 
 3) It will make more sense to connect buyer and seller with a transaction entity and then realte transaction entity with a feadback entity. 
-4) Why there is Winner entity? 
+4) We should relate bids entity with items entity. 
+5) Why there is Winner entity? 
 
 
 #### B: E-R diagram (max 25 points)
