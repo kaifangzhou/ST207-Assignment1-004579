@@ -20,7 +20,7 @@ Overall the E-R diagram is not well designed based on your conceptual model in p
 Excellent!
 
 #### D. Data loading (INSERT TABLE commands) (max 5 points)
-Good. You can try to load all data in one go to a table, i.e. using INSERT INTO table_name command once only to save your time. 
+Good. You can load multiple rows of data in one go. You don't have to repeat INSERT tablename command for every single row.
 
 
 ### DATABASE MANIPULATION (DML)
